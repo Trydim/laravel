@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "name": "my-webpack-project",
+  "scripts": {
+    "update": "git pull && npm run coreProd && npm run createResourceFile && npm run coreModuleProd",
+
+    "startLIVEReload": "webpack-dev-server",
+
+    "createResourceFile": "node ./webpack/createResourceFile.js",
+    "coreProd": "webpack --env production --config ./webpack/webpack.config.js",
+    "coreModuleProd": "webpack --env production --config ./webpack/webpack.module.js",
+
+    "coreDev": "webpack --config ./webpack/webpack.config.js",
+    "coreModuleDev": "webpack --config ./webpack/webpack.module.js"
+  }
+}
